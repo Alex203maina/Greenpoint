@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- App theme -->
+  <style name="Theme.Greenpoint" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme colors -->
+    <item name="colorPrimary">@color/green_500</item>
+    <item name="colorPrimaryVariant">@color/green_700</item>
+    <item name="colorSecondary">@color/green_700</item>
+    <item name="android:statusBarColor">@color/green_700</item>
+  </style>
+</resources>
