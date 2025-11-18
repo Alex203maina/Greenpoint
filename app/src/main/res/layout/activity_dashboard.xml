@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="#FFFFFF">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Status Bar Area (placeholder) -->
+
+    <!-- Welcome Section -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Good Morning"
+      android:textSize="16sp"
+      android:textColor="#666666"
+      android:layout_marginTop="16dp" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="JOHN DOE"
+      android:textSize="24sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginTop="4dp" />
+
+    <!-- Stats Cards -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="24dp"
+      android:weightSum="3">
+
+      <!-- Total Earnings -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="$89.45"
+          android:textSize="18sp"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Total Earnings"
+          android:textSize="12sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+      </LinearLayout>
+
+      <!-- Recycled -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="127.8kg"
+          android:textSize="18sp"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Recycled"
+          android:textSize="12sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+      </LinearLayout>
+
+      <!-- CO2 Saved -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="650kg"
+          android:textSize="18sp"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="CO2 saved"
+          android:textSize="12sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Quick Actions Title -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Quick Actions"
+      android:textSize="18sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginTop="32dp" />
+
+    <!-- Quick Actions Grid -->
+    <GridLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:columnCount="2"
+      android:rowCount="2"
+      android:layout_marginTop="16dp"
+      android:columnWidth="0dp">
+
+      <!-- Find Centers -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:src="@drawable/ic_location"
+          android:contentDescription="Find Centers" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Find Centers"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="locate nearby"
+          android:textSize="12sp"
+          android:textColor="#666666" />
+      </LinearLayout>
+
+      <!-- Price Check -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:src="@drawable/ic_money"
+          android:contentDescription="Price Check" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Price Check"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Compare rates"
+          android:textSize="12sp"
+          android:textColor="#666666" />
+      </LinearLayout>
+
+      <!-- Collection -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:src="@drawable/ic_truck"
+          android:contentDescription="Collection" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Collection"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="schedule pick-up"
+          android:textSize="12sp"
+          android:textColor="#666666" />
+      </LinearLayout>
+
+      <!-- Achievements -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:src="@drawable/ic_rewards"
+          android:contentDescription="Achievements" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Achievements"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="View progress"
+          android:textSize="12sp"
+          android:textColor="#666666" />
+      </LinearLayout>
+    </GridLayout>
+
+    <!-- Special Offers -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Special Offers"
+      android:textSize="18sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginTop="32dp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@drawable/special_offer_background"
+      android:padding="16dp"
+      android:layout_marginTop="16dp"
+      android:gravity="center_vertical">
+
+      <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_image"
+        android:contentDescription="Double Points" />
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Double Points"
+          android:textSize="16sp"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Weekend"
+          android:textSize="14sp"
+          android:textColor="#666666" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Earn 24 points on all plastics"
+          android:textSize="12sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Recent Activity -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Recent activity"
+      android:textSize="18sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginTop="32dp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="@drawable/card_background"
+      android:padding="16dp"
+      android:layout_marginTop="16dp"
+      android:gravity="center_vertical">
+
+      <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/recycle"
+        android:contentDescription="Recycled" />
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Recycled 2.5kg plastic bottles"
+          android:textSize="16sp"
+          android:textColor="#000000" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="2 days ago"
+          android:textSize="14sp"
+          android:textColor="#666666" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2,135 earned"
+        android:textSize="14sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Spacer -->
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="72dp" />
+
+  </LinearLayout>
+
+</ScrollView>

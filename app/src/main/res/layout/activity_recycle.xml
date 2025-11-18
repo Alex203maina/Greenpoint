@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="#FFFFFF">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Title -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Recycling Centers"
+      android:textSize="24sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginBottom="16dp" />
+
+    <!-- Search Bar -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@drawable/edit_text_background"
+      android:gravity="center_vertical"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:layout_marginBottom="24dp">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_search"
+        android:contentDescription="Search"
+        />
+
+      <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search centers..."
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+    </LinearLayout>
+
+    <!-- Results Count -->
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="2 Centers Found"
+      android:textSize="18sp"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      android:layout_marginBottom="16dp" />
+
+    <!-- GreenCycle Hub Card -->
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      app:cardCornerRadius="12dp"
+      app:cardElevation="4dp"
+      app:cardUseCompatPadding="true">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Center Name and Rating -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GreenCycle Hub"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 48 (156)"
+            android:textSize="14sp"
+            android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Address -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="123 main street, town center"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="8dp" />
+
+        <!-- Hours -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Mon-Sat: 8AM-6PM, Sun: 10AM-4PM"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+
+        <!-- Phone -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="+1 (555) 123-4567"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+
+        <!-- Accepted Materials Title -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Accepted materials:"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="16dp" />
+
+        <!-- Materials List -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginTop="8dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Plastic Bottles"
+            android:textSize="14sp"
+            android:textColor="#666666" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Aluminum Cans"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Glass Bottles"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#E0E0E0"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+          <!-- View Prices Button -->
+          <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="VIEW PRICES"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/outline_button_background"
+            android:textColor="#2196F3" />
+
+          <!-- Get Directions Button -->
+          <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="GET DIRECTIONS"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- EcoMax Recycling Card -->
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      app:cardCornerRadius="12dp"
+      app:cardElevation="4dp"
+      app:cardUseCompatPadding="true">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Center Name and Rating -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center_vertical">
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EcoMax Recycling"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 48 (156)"
+            android:textSize="14sp"
+            android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Address -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="123 main street, town center"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="8dp" />
+
+        <!-- Hours -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Mon-Sat: 8AM-6PM, Sun: 10AM-4PM"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+
+        <!-- Phone -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="+1 (555) 123-4567"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:layout_marginTop="4dp" />
+
+        <!-- Accepted Materials Title -->
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Accepted materials:"
+          android:textSize="14sp"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginTop="16dp" />
+
+        <!-- Materials List -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginTop="8dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Plastic Bottles"
+            android:textSize="14sp"
+            android:textColor="#666666" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Aluminum Cans"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Electronics"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#E0E0E0"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2">
+
+          <!-- View Prices Button -->
+          <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="VIEW PRICES"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/outline_button_background"
+            android:textColor="#2196F3" />
+
+          <!-- Get Directions Button -->
+          <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="GET DIRECTIONS"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bottom Navigation Spacer -->
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="72dp" />
+
+  </LinearLayout>
+
+</ScrollView>

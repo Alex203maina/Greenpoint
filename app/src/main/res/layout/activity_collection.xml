@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#F8F9FA"
+  android:fillViewport="true">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="40dp">
+
+    <!-- Title -->
+    <TextView
+      android:id="@+id/tvTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="Schedule Collection"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtitle -->
+    <TextView
+      android:id="@+id/tvSubtitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="We will pickup your recyclables at your doorstep!"
+      android:textSize="16sp"
+      android:textColor="#666666"
+      android:layout_marginTop="8dp"
+      app:layout_constraintTop_toBottomOf="@id/tvTitle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Select Materials Label -->
+    <TextView
+      android:id="@+id/tvSelectMaterialsLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Select Materials"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_marginTop="32dp"
+      app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Materials Grid (2 columns) -->
+    <androidx.gridlayout.widget.GridLayout
+      android:id="@+id/gridMaterials"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:columnCount="2"
+      android:layout_marginTop="16dp"
+      app:layout_constraintTop_toBottomOf="@id/tvSelectMaterialsLabel"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:alignmentMode="alignMargins">
+
+      <!-- 1. Plastic Bottles -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_plastic_bottle"
+            android:contentDescription="Plastic Bottles"
+           />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plastic Bottles"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle=""
+            android:layout_marginTop="12dp"
+            android:gravity="center" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Plastic"
+             />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. Aluminum Cans -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_aluminum_can"
+            android:contentDescription="Aluminum Cans"
+             />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aluminum Cans"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+
+            android:layout_marginTop="12dp" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Aluminum"
+             />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. Glass Bottles -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_glass_bottle"
+            android:contentDescription="Glass Bottles"
+             />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Glass Bottles"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="12dp" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Glass"
+             />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. Cardboard / Paper -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_cardboard"
+            android:contentDescription="Cardboard"
+            />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cardboard / Paper"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="12dp" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Cardboard"
+            />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 5. Newspapers -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_newspaper"
+            android:contentDescription="Newspapers"
+           />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Newspapers"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="12dp" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Newspapers"
+            />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 6. Electronics -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_columnWeight="1"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp"
+          android:gravity="center"
+          android:background="?attr/colorSurface">
+
+          <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_electronics"
+            android:contentDescription="Electronics"
+             />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electronics"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+
+            android:layout_marginTop="12dp" />
+
+          <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Add Electronics"
+            />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Select Date -->
+    <TextView
+      android:id="@+id/tvSelectDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Select Date"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_marginTop="32dp"
+      app:layout_constraintTop_toBottomOf="@id/gridMaterials"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Date Pills Container -->
+    <HorizontalScrollView
+      android:id="@+id/dateScrollView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:paddingVertical="4dp"
+      app:layout_constraintTop_toBottomOf="@id/tvSelectDate"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <LinearLayout
+        android:id="@+id/dateContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <TextView
+            android:id="@+id/dateMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Mon\n20"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <TextView
+            android:id="@+id/dateTue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Tue\n21"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardBackgroundColor="#4CAF50"
+          app:cardElevation="2dp">
+
+          <TextView
+            android:id="@+id/dateWed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Wed\n22"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <TextView
+            android:id="@+id/dateThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Thu\n23"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <TextView
+            android:id="@+id/dateFri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Fri\n24"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="4dp"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <TextView
+            android:id="@+id/dateSat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="20dp"
+            android:text="Sat\n25"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Select Time -->
+    <TextView
+      android:id="@+id/tvSelectTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Select Time"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:textColor="#000000"
+      android:layout_marginTop="32dp"
+      app:layout_constraintTop_toBottomOf="@id/dateScrollView"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Time Slots -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/timeSlotsContainer"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      app:layout_constraintTop_toBottomOf="@id/tvSelectTime"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <RadioGroup
+        android:id="@+id/radioGroupTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Time Slot 1 -->
+        <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardTime1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          app:cardCornerRadius="12dp"
+          app:strokeColor="#4CAF50"
+          app:strokeWidth="2dp">
+
+          <RadioButton
+            android:id="@+id/rbTime1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9:00 AM – 11:00 AM"
+            android:textSize="16sp"
+            android:padding="18dp"
+            android:button="@android:color/transparent"
+            android:background="?attr/selectableItemBackground"
+            android:checked="true" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Time Slot 2 -->
+        <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardTime2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          app:cardCornerRadius="12dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <RadioButton
+            android:id="@+id/rbTime2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11:00 AM – 1:00 PM"
+            android:textSize="16sp"
+            android:padding="18dp"
+            android:button="@android:color/transparent"
+            android:background="?attr/selectableItemBackground" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Time Slot 3 -->
+        <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardTime3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          app:cardCornerRadius="12dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <RadioButton
+            android:id="@+id/rbTime3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1:00 PM – 3:00 PM"
+            android:textSize="16sp"
+            android:padding="18dp"
+            android:button="@android:color/transparent"
+            android:background="?attr/selectableItemBackground" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Time Slot 4 -->
+        <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardTime4"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          app:cardCornerRadius="12dp"
+          app:strokeColor="#E0E0E0"
+          app:strokeWidth="1dp">
+
+          <RadioButton
+            android:id="@+id/rbTime4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3:00 PM – 5:00 PM"
+            android:textSize="16sp"
+            android:padding="18dp"
+            android:button="@android:color/transparent"
+            android:background="?attr/selectableItemBackground" />
+        </com.google.android.material.card.MaterialCardView>
+      </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Pickup Address -->
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilAddress"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:hint="Pickup Address"
+      app:hintTextColor="#666666"
+      app:boxStrokeColor="#4CAF50"
+      app:boxCornerRadiusBottomStart="12dp"
+      app:boxCornerRadiusBottomEnd="12dp"
+      app:boxCornerRadiusTopStart="12dp"
+      app:boxCornerRadiusTopEnd="12dp"
+      app:layout_constraintTop_toBottomOf="@id/timeSlotsContainer"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plot A Apartment, Syokimau Bypass, Nairobi"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:minHeight="56dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Schedule Collection Button -->
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnScheduleCollection"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      android:text="SCHEDULE COLLECTION"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:textColor="#FFFFFF"
+      app:cornerRadius="12dp"
+      android:backgroundTint="#4CAF50"
+      android:layout_marginTop="40dp"
+      android:layout_marginBottom="20dp"
+      app:icon="@drawable/ic_shedule"
+      app:iconGravity="textStart"
+      app:iconPadding="8dp"
+      app:layout_constraintTop_toBottomOf="@id/tilAddress"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

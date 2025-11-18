@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  package="com.example.greenpoint"> <!-- Add your package name here -->
+  package="com.example.greenpoint">
+  <uses-permission android:name="android.permission.INTERNET" />
+
 
   <application
     android:allowBackup="true"
@@ -13,8 +15,9 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.Greenpoint">
 
+    <!-- Main Activity (Launcher) -->
     <activity
-      android:name="com.example.greenpoint.MainActivity"
+      android:name=".MainActivity"
       android:exported="true"
       android:theme="@style/Theme.Greenpoint">
       <intent-filter>
@@ -22,6 +25,25 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <!-- Login Activity -->
+    <activity
+      android:name=".LoginActivity"
+      android:exported="false"
+      android:theme="@style/Theme.Greenpoint" />
+
+    <!-- Register Activity -->
+    <activity
+      android:name=".RegisterActivity"
+      android:exported="false"
+      android:theme="@style/Theme.Greenpoint" />
+
+    <!-- Home Activity (Main app screen after login) -->
+    <activity
+      android:name=".HomeActivity"
+      android:exported="false"
+      android:theme="@style/Theme.Greenpoint" />
+
   </application>
 
 </manifest>
